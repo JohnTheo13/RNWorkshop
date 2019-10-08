@@ -4,7 +4,8 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:import/typescript"
   ],
   "plugins": ["@typescript-eslint", "import", "react", "prettier"],
   "rules": {
@@ -20,7 +21,7 @@
     "max-len": [
       "error",
       80,
-      { "ignoreUrls": true, "ignorePattern": "^import |^export {(.*?)}" }
+      { "ignoreUrls": true }
     ]
   },
   "settings": {
@@ -28,7 +29,9 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "env": {
