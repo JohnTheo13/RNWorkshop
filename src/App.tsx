@@ -9,19 +9,14 @@
  */
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
-const style = StyleSheet.create({
-  header: {
-    fontSize: 40,
-    textAlign: 'center'
-  }
-});
+import Header from './components/Header';
 
 const App = (): React.FunctionComponentElement<{}> => {
   return (
     <View>
-      <Text style={style.header}>Welcome to the RN workshop</Text>
+      <Header />
     </View>
   );
 };
