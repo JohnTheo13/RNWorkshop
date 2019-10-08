@@ -10,15 +10,17 @@
 
 import React from 'react';
 import { View } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-import Header from './components/Header';
+import { Home, Details } from './screens';
 
-const App = (): React.FunctionComponentElement<{}> => {
-  return (
-    <View>
-      <Header />
-    </View>
-  );
-};
+const App = createStackNavigator(
+  {
+    Home,
+    Details
+  },
+  { initialRouteName: 'Home' }
+);
 
-export default App;
+export default createAppContainer(App);
