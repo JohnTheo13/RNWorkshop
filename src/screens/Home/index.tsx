@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, ImageBackground, StyleSheet, Button, View } from 'react-native';
 import { NavigationStackProp } from 'react-navigation-stack';
-import { white } from '../../config/theme';
+import { white } from '../../utils/theme';
 
 const style = StyleSheet.create({
   header: {

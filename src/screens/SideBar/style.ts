@@ -1,6 +1,6 @@
 import { Dimensions } from 'react-native';
 
-import { whiteLight, black } from '../../config/theme';
+import { whiteLight, black } from '../../utils/theme';
 
 const deviceHeight = Dimensions.get('window').height;
 

@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/**
+  /**
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
@@ -9,26 +8,17 @@
  * @format
  */
 
-import { createAppContainer } from 'react-navigation';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import React from 'react';
+import { View } from 'react-native';
 
-import { Home, Details, SideBar } from './screens';
+import Header from './components/Header';
 
-const Drawer = createDrawerNavigator(
-  {
-    Home,
-    Details
-  },
-  {
-    contentComponent: SideBar,
-    contentOptions: {
-      iconContainerStyle: {
-        color: 'red',
-        opacity: 1
-      },
-      activeTintColor: 'red'
-    }
-  }
-);
+const App = (): React.FunctionComponentElement<{}> => {
+  return (
+    <View>
+      <Header />
+    </View>
+  );
+};
 
-export default createAppContainer(Drawer);
+export default App;
