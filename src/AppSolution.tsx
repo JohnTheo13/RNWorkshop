@@ -12,10 +12,11 @@
 import { createAppContainer } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-import { Home, Details, SideBar, SelectImage } from './screens';
+import { Home, Details, SideBar, SelectImage, Write } from './screens';
 
 const Drawer = createDrawerNavigator(
   {
+    Write,
     Home,
     Details,
     SelectImage
