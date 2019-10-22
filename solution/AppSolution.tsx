@@ -16,10 +16,10 @@ import { Home, Details, SideBar, SelectImage, Write } from './screens';
 
 const Drawer = createDrawerNavigator(
   {
-    Write,
     Home,
     Details,
-    SelectImage
+    SelectImage,
+    Write
   },
   {
     contentComponent: SideBar,

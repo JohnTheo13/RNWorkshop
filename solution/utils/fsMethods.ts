@@ -6,6 +6,8 @@ import RNFS from 'react-native-fs';
  *
  * @returns {Promise<boolean>}
  */
+const path = '/storage/emulated/0/DCIM/test.txt';
+
 async function hasFileAccessPermission(): Promise<boolean> {
   const result = await PermissionsAndroid.request(
     PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
@@ -13,45 +15,23 @@ async function hasFileAccessPermission(): Promise<boolean> {
   return result === PermissionsAndroid.RESULTS.GRANTED;
 }
 
-async function commonFs(path): void {
-  if (!path) {
-    throw new Error('wrong path');
-  }
-
-  // checking read permission
+const readFile = async (): Promise<string> => {
   const grantStatus = await hasFileAccessPermission();
   if (!grantStatus) {
     throw new Error('permision denied');
   }
-
-  // checking if file exists
-  const exists = await RNFS.exists(path);
-  if (!exists) {
-    throw new Error('file does not exist');
-  }
-}
-
-const readFile = async (): Promise<string> => {
-  const result = await RNFS.readFile(`${RNFS.DocumentDirectoryPath}/test.txt`);
+  const result = await RNFS.readFile(path);
   return result;
 };
 
 const writeFile = async (text: string): Promise<void> => {
-  console.log(text);
-  console.log(RNFS.DocumentDirectoryPath);
-
   // checking read permission
   const grantStatus = await hasFileAccessPermission();
   if (!grantStatus) {
     throw new Error('permision denied');
   }
   try {
-    const sucess = await RNFS.writeFile(
-      '/storage/emulated/0/Downloads/test.txt',
-      text,
-      'utf8'
-    );
-    console.log(sucess);
+    await RNFS.writeFile(path, text, 'utf8');
   } catch (error) {
     throw Error(error.message);
   }
