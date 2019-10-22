@@ -3,7 +3,11 @@
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
 	"javascript.validate.enable": false,
-	"typescript.suggest.autoImports": false,
+  "typescript.suggest.autoImports": false,
+  "workbench.editor.labelFormat": "short",
+  "workbench.colorCustomizations": {
+		"titleBar.inactiveBackground": "#a4b6e8"
+	},
 	"eslint.validate": [
     {
       "language": "javascript",
