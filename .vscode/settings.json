@@ -6,7 +6,8 @@
   "typescript.suggest.autoImports": false,
   "workbench.editor.labelFormat": "short",
   "workbench.colorCustomizations": {
-		"titleBar.inactiveBackground": "#a4b6e8"
+    "titleBar.inactiveBackground": "#a4b6e8",
+    "tab.activeBackground": "#52443f"
 	},
 	"eslint.validate": [
     {

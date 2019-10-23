@@ -9,14 +9,12 @@
  */
 
 import React from 'react';
-import { View } from 'react-native';
-
-import Header from './components/Header';
+import { View, Text } from 'react-native';
 
 const App = (): React.FunctionComponentElement<{}> => {
   return (
     <View>
-      <Header />
+      <Text>HELLO WORLD</Text>
     </View>
   );
 };
