@@ -39,7 +39,7 @@ Add drawer navigation with:
 ![drawer screen](./docs/drawer-screen.png)  
 
 ### Step 5 
-Add 3d screen with an image switch
+Add 3d screen with an image switch  
 ![third screen](./docs/third-screen.png)
 
 ### Step 7
@@ -57,3 +57,6 @@ Check app on different android devices
 
 ### Step 11
 Check app on IOS devices
+
+### Step 12
+yarn test
